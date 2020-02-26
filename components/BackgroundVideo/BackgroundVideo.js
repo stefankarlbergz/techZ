@@ -1,7 +1,7 @@
 import React from 'react';
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import videoz from "assets/img/zoomaTechZ.mp4";
+import videoz from "assets/img/zooma_tech_hero.mp4";
 
 
 
@@ -33,7 +33,7 @@ const BackgroundVideo = () => {
               </div>
             </GridItem>
           </GridContainer> */}
-            <video src={require('assets/img/zoomaTechZ.mp4')} autoPlay="autoplay" loop="loop" muted style={video} >
+            <video src={require('assets/img/zooma_tech_hero.mp4')} autoPlay="autoplay" loop="loop" muted style={video} >
 
                 {/* <source src={videoSource} type="video/mp4" /> */}
                 Your browser does not support the video tag.
