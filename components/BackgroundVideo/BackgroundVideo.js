@@ -23,18 +23,7 @@ const BackgroundVideo = () => {
     const videoSource = videoz
     return (
         <div style={container} >
-            {/* <GridContainer>
-            <GridItem>
-              <div>
-                <h1>TECH MEETINGS</h1>
-                <h3>
-                  test
-                </h3>
-              </div>
-            </GridItem>
-          </GridContainer> */}
             <video src={require('assets/img/zooma_tech_hero.mp4')} autoPlay="autoplay" loop="loop" muted style={video} >
-
                 {/* <source src={videoSource} type="video/mp4" /> */}
                 Your browser does not support the video tag.
             </video>

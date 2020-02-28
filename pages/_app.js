@@ -20,10 +20,17 @@ import ReactDOM from "react-dom";
 import App from "next/app";
 import Head from "next/head";
 import Router from "next/router";
+import { withContentful } from 'next-contentful';
 
 import PageChange from "components/PageChange/PageChange.js";
 
 import "assets/scss/nextjs-material-kit.scss?v=1.0.0";
+
+// Contentful config properties
+const space = '3rnc1fzczbik';
+const accessToken = 'LFv8DUnkOvSD3uP9RC55EFhoGaD4FdJFNqMfNyX8W4g';
+const host = 'cdn.contentful.com';
+const locale = 'es-US';
 
 Router.events.on("routeChangeStart", url => {
   console.log(`Loading: ${url}`);
@@ -42,7 +49,7 @@ Router.events.on("routeChangeError", () => {
   document.body.classList.remove("body-page-transition");
 });
 
-export default class MyApp extends App {
+class MyApp extends App {
   componentDidMount() {
     let comment = document.createComment(`
 
@@ -73,7 +80,8 @@ export default class MyApp extends App {
     return { pageProps };
   }
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps, store } = this.props;
+
 
     return (
       <React.Fragment>
@@ -85,3 +93,9 @@ export default class MyApp extends App {
     );
   }
 }
+export default withContentful({
+  space,
+  accessToken,
+  host,         // Optional: Defaults to 'cdn.contentful.com'
+  locale,       // Optional: Defaults to `en-US`
+})(MyApp);
