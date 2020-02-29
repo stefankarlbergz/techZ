@@ -10,13 +10,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Footer from "components/Footer/Footer.js";
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import Parallax from "components/Parallax/Parallax.js";
 import Post from 'components/post'
 // sections for this page
 
-import styles from "assets/jss/nextjs-material-kit/pages/components.js";
+// import styles from "assets/jss/nextjs-material-kit/pages/components.js";
+import styles from "assets/jss/nextjs-material-kit/pages/techPage.js";
 import BackgroundVideo from 'components/BackgroundVideo/BackgroundVideo';
 
 const useStyles = makeStyles(styles);
